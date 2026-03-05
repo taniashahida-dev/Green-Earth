@@ -1,40 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body class="w-11/12 mx-auto" >
-      <h1 class="text-green-400 font-bold text-5xl text-center my-10">Choose Your Trees</h1>
-   <main  class="grid grid-cols-4 gap-3">
-   
-     <section class="col-span-1 card card-body shadow ">
-        <h1 class="font-bold text-4xl text-center mb-2.5  ">Categories</h1>
-<button class="btn  w-full text-white bg-green-400 mb-2.5 " id="trees-btn">All Trees</button>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="w-11/12 mx-auto">
+    <h1 class="text-green-400 font-bold text-5xl text-center my-10">
+      Choose Your Trees
+    </h1>
+    <main class="grid grid-cols-4 gap-3">
+      <section class="col-span-1 card card-body shadow">
+        <h1 class="font-bold text-4xl text-center mb-2.5">Categories</h1>
+        <button onclick="selectCategory()"
+          class="btn w-full text-white bg-green-400 mb-2.5"
+          id="trees-btn"
+        >
+          All Trees
+        </button>
         <div id="Categories-container" class="space-y-4">
- 
+
         </div>
-     </section>
+      </section>
 
-     <section class="col-span-2 " >
-       <div class="grid grid-cols-3 gap-2.5 p-3" id="plants-container">
+      <section class="col-span-2">
+        <div class="grid grid-cols-3 gap-2.5 p-3" id="plants-container"></div>
 
-       </div>
-     </section>
+        <div id="loading-spinner" class="hidden flex justify-center my-6">
+          <span class="loading loading-spinner loading-xl"></span>
+        </div>
+      </section>
 
-     <section class="col-span-1 ">
+      <section class="col-span-1">
         <h1 class="font-bold text-4xl">Cart</h1>
-     </section>
-   </main>
+      </section>
+    </main>
 
-
-
-<script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
