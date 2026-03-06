@@ -26,7 +26,7 @@ const loadModal = async (id) => {
 const displayModal = (details) => {
   modalContainer.innerHTML = `
   <h2 class="card-title text-green-900 font-bold text-3xl" >${details.name}</h2>
- <img class="h-48 w-full object-cover  rounded-sm my-2" src="${details.image}" alt="">
+ <img class="h-40 md:h-48 w-full object-cover  rounded-sm my-2" src="${details.image}" alt="">
  
  <p class="text-gray-500 font-bold text-2xl">Category: <span class="badge badge-outline bg-purple-950 text-gray-300">${details.category}</span></p>
   <p class="line-clamp-2 text-gray-500 " >${details.description}</p>
@@ -100,7 +100,7 @@ const displayPlant = (allplants) => {
      src="${plant.image}"
      alt="${plant.name}"
      title="${plant.name}"
-     class="h-48 w-full object-cover cursor-pointer"
+     class="h-40 md:h-48 w-full object-cover cursor-pointer"
      onclick="loadModal(${plant.id})"
        />
   </figure>
