@@ -21,18 +21,14 @@
     <main class="grid grid-cols-4 gap-3">
       <section class="col-span-1 card card-body shadow">
         <h1 class="font-bold text-4xl text-center mb-2.5">Categories</h1>
-        <button onclick="selectCategory(), loadPlant()"
-          class="btn w-full text-white bg-green-400 mb-2.5 "
+        <button
+          onclick="(selectCategory(), loadPlant())"
+          class="btn w-full text-white bg-green-400 mb-2.5"
           id="trees-btn"
         >
           All Trees
         </button>
-        <div id="Categories-container" class="space-y-4 ">
-
-        </div>
-
-      
-
+        <div id="Categories-container" class="space-y-4"></div>
       </section>
 
       <section class="col-span-2">
@@ -43,27 +39,53 @@
         </div>
       </section>
 
-  <!-- Open the modal using ID.showModal() method -->
-<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-<dialog id="modal" class="modal modal-bottom sm:modal-middle rounded-sm p-1">
-  <div class="modal-box ">
-   <div id="modal-container" class="space-y-2">
-      
- 
-     
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <dialog
+        id="modal"
+        class="modal modal-bottom sm:modal-middle rounded-sm p-1"
+      >
+        <div class="modal-box">
+          <div id="modal-container" class="space-y-2"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
 
-   </div>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
+      <section class="col-span-1 bg-white card card-body shadow-2xl">
+        <h1 class="font-bold text-3xl mb-2">Cart</h1>
 
-      <section class="col-span-1">
-        <h1 class="font-bold text-4xl">Cart</h1>
+         <div class="space-y-4">
+                    <div id="cart-Container" class="space-y-4">
+                        <!-- <div class="card card-body bg-slate-100">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h2>Name</h2>
+                                    <p> $2000 × 10</p>
+                                </div>
+                                <button class="btn btn-ghost">X</button>
+                            </div>
+                            <p class="text-right font-semibold text-xl">$500</p> -->
+                        </div>
+                    </div>
+
+                    <div id="emptyCartMessage" class="text-center py-4 hidden">
+                        <p>Your cart is empty</p>
+                        <p>Add trees to get started</p>
+                    </div>
+
+
+                    <!-- Total amount -->
+                    <div class="flex justify-between items-center bg-green-50 rounded-lg p-4 my-3 font-bold">
+                        <span>Total:</span>
+                        <span id="totalPrice">$0</span>
+                    </div>
+
+                </div>
       </section>
     </main>
 
